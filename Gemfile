@@ -23,10 +23,12 @@ gem 'bootstrap-sass'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-its'
   gem 'factory_girl_rails', '~> 4.5'
   gem 'capybara', '~> 2.5'
   gem 'rubocop'
   gem 'guard-rspec', require: false
+  gem 'faker'
 end
 
 group :development do
@@ -34,12 +36,12 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
 end
 
 group :test do
   gem 'shoulda-matchers', '~> 3.0', require: false
   gem 'database_cleaner'
-  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
