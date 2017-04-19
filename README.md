@@ -1,6 +1,6 @@
 # Coupgon-Coding-Test
 
-Note: Please seed the database before running the app. It sets up the golf club and the owner.
+Note: Please seed the database before running the app. It sets up the golf club and the owner. The first user is owner user, and the password for all users is the same, 'password123'.
 
 Funtionalities Completed:
 
