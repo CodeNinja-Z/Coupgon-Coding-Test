@@ -1,0 +1,158 @@
+.center {
+  text-align: center;
+}
+
+.navbar {
+  background-color: #337ab7;
+  .nav {
+    line-height: 48px;
+    .left {
+      float: left;
+    }
+    .right {
+      float: right;
+    }
+    li {
+      h2 {
+        color: white;
+        font-size: 35px;
+        padding-left: 1.7142857143em;
+        margin: 15px 0 15px;
+      }
+      h4 {
+        color: white;
+        font-size: 20px;
+        padding-left: 1.7142857143em;
+        margin: 23px 0 23px;
+      }
+      a {
+        color: white;
+        font-size: 1.2em;
+        margin-right: 2em;
+        &:hover {
+          background-color: #a0a0a0;
+        }
+      }
+    }
+  }
+}
+
+.flash-messages {
+  top: -40px;
+}
+
+.new-reservation-banner,
+.edit-reservation-banner,
+.reservations-banner,
+.owner-index-banner {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  h3 {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 700px) {
+  #icon {
+    display: block;
+  }
+  #text {
+    display: none;
+  }
+  #big-banner {
+    display: none;
+  }
+}
+
+@media (min-width: 701px) {
+  #icon {
+    display: none;
+  }
+  #text {
+    display: block;
+  }
+  #small-banner {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .new-reservation,
+  .edit-reservation,
+  .reservations,
+  .owner-index {
+    width: 100%;
+  }
+  #small-banner {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) {
+  .new-reservation,
+  .edit-reservation,
+  .reservations,
+  .owner-index {
+    width: 50%;
+  }
+}
+
+.new-reservation,
+.edit-reservation,
+.reservations,
+.owner-index {
+  margin: 10px auto 30px;
+  .form-group {
+    margin-bottom: 7.5px;
+    label{
+      font-size: 120%;
+    }
+  }
+  .tee-time {
+    text-align: center;
+  }
+  .submit {
+    text-align: center;
+  }
+}
+
+.owner-index {
+  text-align: center;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+}
+
+.switch-btn-wrap {
+  width: 250px;
+  margin: 30px auto 30px;
+  text-align: center;
+}
+
+.submit input[type="submit"], 
+.switch-btn,
+.reservation-btn {
+  font-size: 1.2em;
+  border-radius: 5px;
+  background-color: #337ab7;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.reservations {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
+}
