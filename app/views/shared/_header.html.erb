@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default">
+  <ul class="nav nav-pills">
+    <li role="presentation" class="left" id="big-banner"><h2>Carlos Golf Club</h2></li>
+    <li role="presentation" class="left" id="small-banner"><h4>Carlos Golf Club</h4></li>
+
+    <% if current_user %>
+      <li role="presentation" class="right" id="text">
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      </li>
+      <li role="presentation" class="right" id="icon">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+        <% end %>
+      </li>
+
+      <li role="presentation" class="right" id="text">
+        <%= link_to "Edit Account", edit_user_registration_path %>
+      </li>
+      <li role="presentation" class="right" id="icon">
+        <%= link_to edit_user_registration_path do %>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        <% end %>
+      </li>
+      
+      <% if current_user.role == 'Owner' %>
+        <li role="presentation" class="right" id="text">
+          <%= link_to "Edit Club", edit_golf_club_path(GolfClub.first) %>
+        </li>
+        <li role="presentation" class="right" id="icon">
+          <%= link_to edit_golf_club_path(GolfClub.first) do %>
+            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+          <% end %>
+        </li>
+      <% end %>
+
+      <li role="presentation" class="right" id="text">
+        <%= link_to "Home", root_path %>
+      </li>
+      <li role="presentation" class="right" id="icon">
+        <%= link_to root_path do %>
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+        <% end %>
+      </li>
+
+    <% else %>
+      <li role="presentation" class="right" id="text">
+        <%= link_to "Log In", new_user_session_path %>
+      </li>
+      <li role="presentation" class="right" id="icon">
+        <%= link_to new_user_session_path do %>
+          <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</nav>

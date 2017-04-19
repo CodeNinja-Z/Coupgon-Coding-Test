@@ -1,0 +1,14 @@
+<div class="owner-index-banner">
+  <h3>All of the reservations booked:</h3>
+</div>
+
+<div class="owner-index">
+  <% @sorted_reservations.each do |reservation| %>
+    <ul>
+      <li>Date & Time: <%= reservation.tee_time %></li>
+      <li>Cuntomer Name: <%= reservation.user.full_name %></li>
+    </ul>
+    <%= link_to 'Modify Reservation', edit_golf_club_reservation_path(reservation.golf_club, reservation), class: 'reservation-btn btn'%>
+    <%= link_to 'Delete Reservation', golf_club_reservation_path(reservation.golf_club, reservation), method: :delete, message: {confirm: "Are you sure you want to delete your reservation?"}, class: 'reservation-btn btn'%>
+  <% end %>
+</div>

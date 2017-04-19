@@ -1,0 +1,15 @@
+<div class="new-reservation-banner">
+  <h3>Book a Tee</h3>
+</div>
+
+<div class="new-reservation">
+  <%= render 'new_reservation' %>
+</div>
+
+<div class="switch-btn-wrap">
+  <button class="switch-btn">View/Hide All Tee Times Booked</button>
+</div>
+
+<div class="reservations">
+  <%= render 'reservations', sorted_reservations: @sorted_reservations %>
+</div>

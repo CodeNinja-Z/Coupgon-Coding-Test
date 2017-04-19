@@ -1,0 +1,20 @@
+<%= form_for([@golf_club, @reservation]) do |f| %>
+  <% if @reservation.errors.any? %>
+    <div class="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error")%> prohibited the reservation from being saved: </h2>
+      <ul>
+        <% @reservation.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group tee-time">
+    <%= f.label :tee_time %>
+    <%= f.datetime_select :tee_time, minute_step: 20, ampm: true, start_hour: 9, end_hour: 16 %>
+  </div>
+  <div class="submit">
+    <%= f.submit "Reserve" %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<%= form_for(@golf_club) do |f| %>
+  <%if @golf_club.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@golf_club.errors.count, "error") %> prohibited this golf_club from being saved: </h2>
+      <ul>
+        <% @golf_club.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="orm-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="submit">
+    <%= f.submit %>
+  </div>
+<% end %>

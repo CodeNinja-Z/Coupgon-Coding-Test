@@ -1,0 +1,17 @@
+<div class="reservations-banner">
+  <h3>Reservations you have booked: </h3>
+</div>
+
+<div class="reservations center">
+  <% @reservations.each do |reservation| %>
+    <ul>
+      <li>From <%= reservation.golf_club.name %></li>
+      <li>Date & Time: <%= reservation.tee_time %></li>
+    </ul>
+    <p><%= link_to 'Edit reservation', edit_golf_club_reservation_path(reservation.golf_club, reservation) %></p>
+  <% end %>
+</div>
+
+<div class="center">
+  <%= link_to 'Back to Golf Club', root_path %>
+</div>
