@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+include FactoryGirl::Syntax::Methods
+
+unless %w(test production).include? Rails.env
+  puts 'Creating golf club, users and reservations...'
+  create :golf_club, :seed_development_database
+  p 'DONE'
+end
